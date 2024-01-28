@@ -5,6 +5,10 @@
 
 ---
 
+## 대회 설명
+
+왜곡이 존재하지 않는 이미지(Source Domain)와 레이블을 활용하여, 왜곡된 이미지(Target Domain)에 대해서도 고성능의 이미지 분할을 수행하도록 하는 Unsupervised Domain Adaptation(UDA) 알고리즘을 개발하는 대회
+
 ## UDA 구조
 
 <p align="center"><img src="./img/UDA.PNG"></p>
