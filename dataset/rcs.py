@@ -26,7 +26,7 @@ def save_class_stats(out_dir, sample_class_stats):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_path", type="str", default="./data/samsung_seg")
+    parser.add_argument("--data_path", type=str, default="./data/samsung_seg")
     args = parser.parse_args()
 
     root_path = args.data_path

@@ -6,6 +6,9 @@ from ..config import IMAGE_HEIGHT, IMAGE_WIDTH
 def image_preprocess(root_path,save_path):
     dirs = ['test_image','train_source_image','train_target_image','val_source_image']
 
+    if os.path.exists(save_path) == False:
+        os.makedirs(save_path)
+
     for dir in dirs:
         path = os.path.join(root_path, dir)
         for filename in tqdm.tqdm(os.listdir(path) , desc = dir):
@@ -17,6 +20,9 @@ def image_preprocess(root_path,save_path):
 
 def gt_preprocess(root_path):
     dirs = ['train_source_gt','val_source_gt']
+
+    if os.path.exists(save_path) == False:
+        os.makedirs(save_path)
     
     for dir in dirs:
         path = os.path.join(root_path, dir)
@@ -39,7 +45,7 @@ def gt_preprocess(root_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_path", type="str", default="./data/")
+    parser.add_argument("--data_path", type=str, default="./data/")
     args = parser.parse_args()
 
     root_path = args.data_path

@@ -12,10 +12,10 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from .dataset.dataset import CustomDataset
-from .utils.uda import target_loss, masking, slide_pred
-from .utils.eval import accuracy, miou
-from .config import *
+from dataset.dataset import CustomDataset
+from utils.uda import target_loss, masking, slide_pred
+from utils.metric import accuracy, miou
+from config import *
 
 from .model.daformer import (
     mit_b0, 
@@ -155,7 +155,7 @@ def train_begin(training,loader,running_loss,running_acc,running_iou):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_path", type="str", default="./data(resized)/")
+    parser.add_argument("--data_path", type=str, default="./data(resized)/")
 
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--epochs", type=int, default=100)
@@ -168,7 +168,7 @@ if __name__ == "__main__":
     parser.add_argument("--lambda_mask", type=int, default=1)
 
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--save_path", type="str", default="./ckpt/")
+    parser.add_argument("--save_path", type=str, default="./experiments/")
     parser.add_argument("--checkpoint", type=str, default="")
     
     args = parser.parse_args()
