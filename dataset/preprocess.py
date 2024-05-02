@@ -1,7 +1,7 @@
 import argparse, tqdm, cv2, os
 import numpy as np
 
-from ..config import IMAGE_HEIGHT, IMAGE_WIDTH
+from config import IMAGE_HEIGHT, IMAGE_WIDTH
 
 def image_preprocess(root_path,save_path):
     dirs = ['test_image','train_source_image','train_target_image','val_source_image']

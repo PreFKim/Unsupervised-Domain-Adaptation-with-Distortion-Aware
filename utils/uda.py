@@ -6,7 +6,7 @@ import cv2
 
 import numpy as np
 
-from ..config import *
+from config import *
 
 def dacs(xs,ys,xt,yt,ratio =0.25):
     b,c = yt.shape[:2]

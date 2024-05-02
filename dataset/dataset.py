@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
-from ..config import *
+from config import *
 
 class CustomDataset(Dataset):
     def __init__(self, csv_file, data_path, target_csv_file=None, mix_bg_prob = 0, infer=False):

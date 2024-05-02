@@ -7,7 +7,7 @@ from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 
 from functools import partial
 
-from ..config import CROP_HEIGHT, CROP_WIDTH
+from config import CROP_HEIGHT, CROP_WIDTH
 
 from .utils import OverlapPatchEmbed, Block, MLP, Context_Aware_Fusion
 
